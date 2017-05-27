@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :artists, only: [:index, :show, :destroy] do
     resources :songs, only: [:new, :create, :destroy]
   end
+  resources :photos
 end
