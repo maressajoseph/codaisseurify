@@ -1,0 +1,22 @@
+<h2><%= @artist.name %></h2>
+
+<div class = "container">
+  <h3>All songs from this artist: </h3>
+
+  <% if @artist.songs.any?  %>
+    <ul>
+      <% @artist.songs.each do |song| %>
+      <li><%= song.name %></li>
+      <li><%= song.album %></li>
+      <li><%= song.release_date %></li>
+      <br>
+      <%= link_to "Delete this song", artist_song_path(@artist.id, song.id), class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
+      <br><br>
+  <% end %>
+    </ul>
+  <% else %>
+    <p>This artist doesn't have any songs</p>
+  <% end %>
+  <%= link_to "Add a new song to this artist", new_artist_song_path(@artist.id), class: "btn btn-default" %>
+  <%= link_to "Delete this artist and all their songs", artist_path(@artist.id), class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get "about" => "pages#about"
 
-  resources :songs
-  resources :artists
+  resources :artists, only: [:index, :show, :destroy] do
+    resources :songs, only: [:new, :create, :destroy]
+  end
 end
