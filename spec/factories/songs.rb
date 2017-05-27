@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :song do
-    name          { Faker::Artist.name}
-    album         { Faker::Artist.album }
-    release_date  { Faker::Date.year }
+    name          { Faker::Name.name}
+    album         { Faker::Name.name }
+    release_date  { Faker::Date }
   end
 end
