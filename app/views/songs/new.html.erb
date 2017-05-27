@@ -1,7 +1,9 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    Add a new song
-  </div>
+<div class="container">
+  <h2 class="text-center">Add a new song</h2>
+  <nav class="text-center">
+    <%= link_to "Go back to all songs", artist_path(@artist.id), class: "btn" %>
+    <%= link_to "Go back to all artists", artists_path, class: "btn" %>
+  </nav>
 
   <ul>
      <% @song.errors.full_messages.each do |msg| %>
@@ -12,14 +14,15 @@
   <div class="panel-body">
     <%= form_for [@artist, @song] do |f| %>
 
-      <%= f.label "Name" %>
-      <%= f.text_field :name %>
+      <p><%= f.label "Name" %></p>
+      <%= f.text_field :name, class: "form-control" %>
 
-      <%= f.label "Album" %>
-      <%= f.text_field :album %>
+      <p class="formlabel"><%= f.label "Album" %></p>
+      <%= f.text_field :album, class: "form-control" %>
 
-      <%= f.label "Release year" %>
-      <%= f.number_field :release_date %>
+      <p class="formlabel"><%= f.label "Release year" %></p>
+      <%= f.number_field :release_date, class: "form-control" %>
+      <hr>
 
       <%= f.submit "Save", class: "btn btn-default" %>
 

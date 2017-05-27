@@ -4,4 +4,8 @@ class Artist < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
+  def self.order_by_name
+  @artist = Artist.order(:name)
+  end
+
 end

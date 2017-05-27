@@ -2,9 +2,72 @@
 @import "bootstrap";
 
 body {
-  background-color: black;
+  background-color: #4b4d4a;
+  font-family: 'Raleway', sans-serif;
 }
 
+.whole_container{
+  padding: 3rem;
+  display: flex;
+  }
+
 .jumbotron {
-  background-color: #9c9683;
+  background-color: #3d9863;
+}
+
+.banner {
+  color: #3d9863;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #def0e5;
+}
+
+h2 {
+  color: #3d9863;
+}
+
+a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+.box {
+  margin: 0.5rem;
+  background-color: rgba(170, 170, 170, 0.15);
+  padding:1rem;
+  border-radius: 1%;
+}
+
+p {
+  font-size: 16px;
+  color: #def0e5;
+}
+
+.panel-body {
+  margin: 2rem;
+  background-color: rgba(190, 190, 190, 0.15);
+  padding: 3rem;
+  border-radius: 1%;
+}
+
+.formlabel {
+  font-size: 17px;
+  color: #def0e5;
+  margin-top: 9px;
+}
+
+footer {
+  font-size: 15px;
+  color: #def0e5;
+}
+
+.home-btn {
+  font-size: 17px;
 }

@@ -1,25 +1,23 @@
-<div class="container">
-  <div class="col-md-9">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        Artists
-      </div>
-      <div class="panel-body">
-
-        <% @artists.each do |artist| %>
-        <div class="row">
-          <div class="col-md-6">
-            <h4><%= link_to artist.name, artist %></h4>
-              </div>
-              <div class="col-md-6">
-            <%= image_tag artist.photo.image %>
-          </div>
-              <% end %>
-        </div>
-
-        </div>
-
-      </div>
+<div class="banner">
+  <h1>Artists</h1>
+</div>
+<div class="dropdown text-center">
+  <button class="btn btn-default dropdown-toggle text-center" type="button" data-toggle="dropdown">Order artist by name
+  <span class="caret text-center"></span></button>
+  <ul class="dropdown-menu text-center">
+    <li class="text-center">From A-Z<% @artists.order_by_name %></li>
+    <li class="text-center">From Z-A<% @artists.order_by_name.reverse %></li>
+  </ul>
+</div>
+  <br><br>
+  <div class="container">
+     <div class="row">
+      <% @artists.each do |artist| %>
+      <div class="col-md-6">
+      <h3 class="text-center"><%= link_to artist.name, artist %></h3>
+      <%= image_tag artist.photo.image, :class => "img-thumbnail" %>
     </div>
-  </div>
+      <% end %>
+        <br>
+    </div>
 </div>
