@@ -1,17 +1,16 @@
 <div class="container-fluid bannerr">
   <h2 class="text-center">Add a new song</h2>
-  <nav class="text-center">
-    <%= link_to "Go back to all songs", artist_path(@artist.id), class: "btn" %>
-    <%= link_to "Go back to all artists", artists_path, class: "btn" %>
-  </nav>
+    <nav class="text-center">
+      <%= link_to "Go back to all songs", artist_path(@artist.id), class: "btn" %>
+      <%= link_to "Go back to all artists", artists_path, class: "btn" %>
+    </nav>
 </div>
 <div class="container">
   <ul>
-     <% @song.errors.full_messages.each do |msg| %>
-       <li class="error"><%= msg %></li>
-     <% end %>
+    <% @song.errors.full_messages.each do |msg| %>
+      <li class="error"><%= msg %></li>
+    <% end %>
   </ul>
-
   <div class="panel-body">
     <%= form_for [@artist, @song] do |f| %>
 

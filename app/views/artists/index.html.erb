@@ -2,15 +2,15 @@
   <h1>Artists</h1>
   <p class="music">&#9835; &#9835; &#9835;</p>
 </div>
-  <br><br>
-  <div class="container">
-     <div class="row">
-      <% @artists.each do |artist| %>
+<br><br>
+<div class="container">
+  <div class="row">
+    <% @artists.each do |artist| %>
       <div class="col-md-6">
-      <h3 class="text-center"><%= link_to artist.name, artist %></h3>
-      <%= image_tag artist.photo.image, :class => "img-thumbnail" %>
-    </div>
-      <% end %>
-        <br>
-    </div>
+        <h3 class="text-center"><%= link_to artist.name, artist %></h3>
+        <%= image_tag artist.photo.image, :class => "img-thumbnail" %>
+      </div>
+    <% end %>
+    <br>
+  </div>
 </div>
