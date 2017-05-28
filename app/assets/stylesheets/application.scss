@@ -15,12 +15,13 @@ body {
   background-color: #3d9863;
 }
 
-.banner {
-  color: #3d9863;
+.bannerr {
+  color: #333332;
   text-align: center;
+  background-color: #3d9863;
 }
 
-.banner h1 {
+.bannerr h1 {
   font-size: 60px;
 }
 
@@ -30,31 +31,30 @@ a {
 }
 
 h2 {
-  color: #3d9863;
+  color: #333332;
 }
 
 a:hover {
   text-decoration: none;
-  color: grey;
+  color: #ffce00;
 }
 
 .box {
-  margin: 0.5rem;
+  margin: 4rem;
   background-color: rgba(170, 170, 170, 0.15);
   padding:1rem;
-  border-radius: 1%;
+  border-radius: 8%;
 }
 
 p {
-  font-size: 16px;
+  font-size: 15px;
   color: #def0e5;
 }
 
 .panel-body {
   margin: 2rem;
-  background-color: rgba(190, 190, 190, 0.15);
+  background-color: rgba(190, 190, 190, 0.25);
   padding: 3rem;
-  border-radius: 1%;
 }
 
 .formlabel {
@@ -69,5 +69,11 @@ footer {
 }
 
 .home-btn {
-  font-size: 17px;
+  font-size: 20px;
+  color: #ffce00;
+}
+
+.error {
+  font-size: 20px;
+  color: #ffce00;
 }
