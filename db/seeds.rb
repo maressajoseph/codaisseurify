@@ -26,6 +26,6 @@ hoja_en_blanco = Song.create(name: "Hoja En Blanco", artist: dread_mar_i, album:
 arbol_sin_hojas = Song.create(name: "Arbol Sin Hojas", artist: dread_mar_i, album: "10 Años", release_date: "2016")
 
 photo1 = Photo.create(remote_image_url: "http://res.cloudinary.com/maressajoseph/image/upload/v1495873577/Noticias-15693-jlg2_630_mag8ip.jpg", artist: juan_luis_guerra)
-photo2 = Photo.create(remote_image_url: "http://res.cloudinary.com/maressajoseph/image/upload/v1495873607/pablo_alboran_zd1pxv.jpg", artist: pablo_alboran)
+photo2 = Photo.create(remote_image_url: "http://res.cloudinary.com/maressajoseph/image/upload/c_scale,h_400,w_630/v1495873607/pablo_alboran_zd1pxv.jpg", artist: pablo_alboran)
 photo3 = Photo.create(remote_image_url: "http://res.cloudinary.com/maressajoseph/image/upload/c_scale,w_630/v1495874360/udslfbftxvzxiuv7pvfl.jpg", artist: mana)
 photo4 = Photo.create(remote_image_url: "http://res.cloudinary.com/maressajoseph/image/upload/c_scale,h_429,w_634/a_0/v1495896354/photo_kbffe5.jpg", artist: dread_mar_i)

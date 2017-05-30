@@ -4,6 +4,16 @@
 </div>
 <br><br>
 <div class="container">
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+        Sort by
+      </button>
+      <ul class="dropdown-menu">
+        <li><%= link_to "Name A-Z", artists_path(sort_by: "Name A-Z") %></li>
+        <li><%= link_to "Name Z-A", artists_path(sort_by: "Name Z-A") %></li>
+      </ul>
+    </div>
+  <br><br>
   <div class="row">
     <% @artists.each do |artist| %>
       <div class="col-md-6">
