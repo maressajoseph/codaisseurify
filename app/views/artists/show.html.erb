@@ -11,7 +11,7 @@
   <% if @artist.songs.any?  %>
     <div class = "row">
       <% @artist.songs.each do |song| %>
-      <div class="col-md-2 box text-center">
+      <div class="col-xs-2 box text-center">
         <p>Name: <%= song.name %></p>
         <p>Album: <%= song.album %></p>
         <p>Release year: <%= song.release_date %></p>
