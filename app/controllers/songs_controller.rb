@@ -4,15 +4,21 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    redirect_to artist_path(@artist.id)
   end
 
   def create
     @song = Song.new(song_params.merge(artist_id: params[:artist_id]))
+    @songs = Song.where(artist_id: @artist.id)
 
     if @song.save
-      redirect_to artist_path(@artist.id), notice: "Song successfully created"
+
+      respond_to do |format|
+        format.html { redirect_to artist_path(@artist.id), notice: "Song successfully created" }
+        format.js { redirect_to artist_path(@artist.id), notice: "Song successfully created" }
+      end
     else
-      render :new
+      render 'artists/show'
     end
   end
 
@@ -31,7 +37,7 @@ class SongsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to artist_path(@artist.id), notice: "Song has been deleted" }
-      format.js
+      format.js { redirect_to artist_path(@artist.id), notice: "Song has been deleted" }
     end
   end
 

@@ -5,7 +5,13 @@ class ArtistsController < ApplicationController
     @artists = Artist.all.order_by(params[:sort_by])
   end
 
+  def new_song
+    @song = Song.new
+    redirect_to artist_path(@artist.id)
+  end
+
   def show
+    @song = @artist.songs
   end
 
   def destroy
@@ -14,6 +20,7 @@ class ArtistsController < ApplicationController
   end
 
   private
+
     def set_artist
       @artist = Artist.find(params[:id])
     end

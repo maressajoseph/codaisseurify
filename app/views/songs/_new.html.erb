@@ -1,18 +1,18 @@
 <div class="container-fluid bannerr">
-  <h2 class="text-center">Add a new song</h2>
-    <nav class="text-center">
+  <h3 class="text-center">Add a new song to <%= @artist.name %></h3>
+    <!-- <nav class="text-center">
       <%= link_to "Go back to all songs", artist_path(@artist.id), class: "btn" %>
       <%= link_to "Go back to all artists", artists_path, class: "btn" %>
-    </nav>
+    </nav> -->
 </div>
 <div class="container">
   <ul>
-    <% @song.errors.full_messages.each do |msg| %>
+    <% song.errors.full_messages.each do |msg| %>
       <li class="error"><%= msg %></li>
     <% end %>
   </ul>
   <div class="panel-body">
-    <%= form_for [@artist, @song] do |f| %>
+    <%= form_for [artist, song] do |f| %>
 
       <p><%= f.label "Name" %></p>
       <%= f.text_field :name, class: "form-control" %>
@@ -24,7 +24,7 @@
       <%= f.number_field :release_date, class: "form-control" %>
       <hr>
 
-      <%= f.submit "Save", class: "btn btn-default" %>
+      <%= f.submit "Save", class: "btn btn-default", remote: true %>
 
     <% end %>
   </div>
