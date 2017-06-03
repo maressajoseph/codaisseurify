@@ -35,6 +35,10 @@ h2 {
   color: #333332;
 }
 
+.add-song {
+  color: #3d9863;
+}
+
 a:hover {
   text-decoration: none;
   color: #ffce00;
@@ -44,7 +48,9 @@ a:hover {
   margin: 4rem;
   background-color: rgba(170, 170, 170, 0.15);
   padding:1rem;
-  border-radius: 8%;
+  border-radius: 5%;
+  width: 210px;
+  height: 180px;
 }
 
 p {

@@ -1,5 +1,5 @@
-<div class="container-fluid bannerr">
-  <h3 class="text-center">Add a new song to <%= @artist.name %></h3>
+<div class="container-fluid">
+  <h3 class="text-center add-song">Add a new song to <%= @artist.name %></h3>
     <!-- <nav class="text-center">
       <%= link_to "Go back to all songs", artist_path(@artist.id), class: "btn" %>
       <%= link_to "Go back to all artists", artists_path, class: "btn" %>
@@ -14,7 +14,7 @@
   <div class="panel-body">
     <%= form_for [artist, song] do |f| %>
 
-      <p><%= f.label "Name" %></p>
+      <p class="formlabel"><%= f.label "Name" %></p>
       <%= f.text_field :name, class: "form-control" %>
 
       <p class="formlabel"><%= f.label "Album" %></p>
