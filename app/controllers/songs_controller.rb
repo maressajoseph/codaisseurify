@@ -26,8 +26,13 @@ class SongsController < ApplicationController
   #end
 
   def destroy
-    @song.destroy
-    redirect_to artist_path(@artist.id), notice: "Song has been deleted"
+    @song.destroy!
+    @songs = Song.where(artist_id: @artist.id)
+
+    respond_to do |format|
+      format.html { redirect_to artist_path(@artist.id), notice: "Song has been deleted" }
+      format.js
+    end
   end
 
   private

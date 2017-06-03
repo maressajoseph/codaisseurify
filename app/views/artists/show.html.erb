@@ -16,7 +16,7 @@
         <p>Album: <%= song.album %></p>
         <p>Release year: <%= song.release_date %></p>
         <hr>
-        <%= link_to "Delete this song", artist_song_path(@artist.id, song.id), class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure you want to delete this song?' } %>
+        <%= link_to "Delete this song", artist_song_path(@artist.id, song.id), class: "btn btn-default", method: :delete, remote: true, data: { confirm: 'Are you sure you want to delete this song?' } %>
         <br>
       </div>
     <% end %>
