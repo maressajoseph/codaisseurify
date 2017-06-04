@@ -8,7 +8,7 @@
     <% end %>
   </ul>
   <div class="panel-body">
-    <%= form_for [artist, song] do |f| %>
+    <%= form_for [artist, song], remote: true do |f| %>
 
       <p class="formlabel"><%= f.label "Name" %></p>
       <%= f.text_field :name, class: "form-control" %>
