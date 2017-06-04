@@ -1,19 +1,13 @@
 <div class="container-fluid bannerr">
   <h1>Artists</h1>
-  <p class="music">&#9835; &#9835; &#9835;</p>
+  <div class="container text-center">
+    <%= link_to "", artists_path(sort_by: "Name A-Z"), class: "glyphicon glyphicon-sort-by-alphabet a-z" %></li>
+    <%= link_to "", artists_path(sort_by: "Name Z-A"), class: "glyphicon glyphicon-sort-by-alphabet-alt a-z" %></li>
+  </div>
+  <br>
 </div>
-<br><br>
 <div class="container">
-    <div class="dropdown pull-right">
-      <button class="btn btn-default dropdown-toggle" style="width:160px;" type="button" data-toggle="dropdown">
-        Sort by:
-      </button>
-      <ul class="dropdown-menu">
-        <li class="text-center"><%= link_to "Artist A-Z", artists_path(sort_by: "Name A-Z"), class: "btn-default" %></li>
-        <li class="text-center"><%= link_to "Artist Z-A", artists_path(sort_by: "Name Z-A"), class: "btn-default" %></li>
-      </ul>
-    </div>
-  <br><br><hr>
+  <br><hr>
   <div class="row">
     <% @artists.each do |artist| %>
       <div class="col-xs-6">

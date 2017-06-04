@@ -6,6 +6,19 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.navbar-brand {
+	font-size: 26px;
+  font-weight: 500;
+}
+
+.navbar-default .navbar-brand {
+	color: #ffce00;
+}
+
+.a-z {
+  font-size: 20px;
+}
+
 
 .whole_container{
   padding: 3rem;
