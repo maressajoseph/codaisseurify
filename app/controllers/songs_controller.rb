@@ -43,7 +43,7 @@ class SongsController < ApplicationController
 
   def destroy_all
     @song = Song.all
-    @song.destroy_all
+    @artist.songs.destroy_all
 
     respond_to do |format|
       format.html { redirect_to artist_path(@artist.id), notice: "Songs have been deleted" }
