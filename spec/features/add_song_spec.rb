@@ -14,12 +14,10 @@ describe "Adding a new song" do
 end
 
 
-# require 'rails_helper'
-#
 # feature 'Add a new song', js: true do
 #
 #   scenario 'Add a new song' do
-#     visit artist_path(artist.id)
+#     visit artist_path(artist)
 #
 #     fill_in 'name', with: 'Lala'
 #     fill_in 'album', with: 'Lala'
@@ -28,5 +26,15 @@ end
 #     page.execute_script("$('form').submit()")
 #
 #     expect(page).to have_content('Lala')
+#   end
+# end
+
+# RSpec.feature "Adding songs", :type => :feature do
+#   scenario "Add a new song to artist" do
+#     visit "new_artist_path"
+#
+#     click_button "Save"
+#
+#     expect(page).to have_text("Song successfully created.")
 #   end
 # end
