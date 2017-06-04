@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_artist, only: [:new, :create, :destroy]
+  before_action :set_artist, only: [:new, :create, :destroy, :destroy_all]
   before_action :set_song, only: [:destroy]
 
   def new
@@ -38,6 +38,16 @@ class SongsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to artist_path(@artist.id), notice: "Song has been deleted" }
       format.js { redirect_to artist_path(@artist.id), notice: "Song has been deleted" }
+    end
+  end
+
+  def destroy_all
+    @song = Song.all
+    @song.destroy_all
+
+    respond_to do |format|
+      format.html { redirect_to artist_path(@artist.id), notice: "Songs have been deleted" }
+      format.js { redirect_to artist_path(@artist.id), notice: "Songs have been deleted" }
     end
   end
 
