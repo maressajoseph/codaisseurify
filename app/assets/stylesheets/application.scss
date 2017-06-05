@@ -59,11 +59,10 @@ a:hover {
 
 .box {
   margin: 4rem;
-  background-color: rgba(170, 170, 170, 0.15);
+  background-color: rgba(19,19,19,0.15);
   padding:1rem;
-  border-radius: 5%;
-  width: 210px;
-  height: 180px;
+  border-radius: 1%;
+  width: auto;
 }
 
 p {
@@ -73,7 +72,7 @@ p {
 
 .panel-body {
   margin: 2rem;
-  background-color: rgba(190, 190, 190, 0.25);
+  background-color: rgba(19,19,19,0.15);
   padding: 3rem;
 }
 
@@ -114,4 +113,9 @@ nav a:hover {
 
 .dropdown-menu {
   align-content: center;
+}
+
+.img-small {
+  height: 200px;
+  width: 210px;
 }
